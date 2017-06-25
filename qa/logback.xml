@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<property name="USER_HOME" value="/home/arq_qa/logs/sme" />
+	<appender name="file"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<append>true</append>
+		<File>${USER_HOME}/arqsme.log</File>
+		<encoder>
+			<pattern>%d{yyyy-MM-dd HH:mm:ss} - %msg%n</pattern>
+		</encoder>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>${USER_HOME}/arqsme.%d{yyyy-MM-dd}.log.gz</fileNamePattern>
+		</rollingPolicy>
+	</appender>
+	<appender name="file1" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<append>true</append>
+		<File>${USER_HOME}/arqsme_adwords.log</File>
+		<encoder>
+			<pattern>%d{yyyy-MM-dd HH:mm:ss} - %msg%n</pattern>
+		</encoder>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>${USER_HOME}/arqsme_adwords.%d{yyyy-MM-dd}.log.gz</fileNamePattern>
+		</rollingPolicy>
+	</appender>
+	<appender name="file2"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<append>true</append>
+		<File>${USER_HOME}/arqsme_controller.log</File>
+		<encoder>
+			<pattern>%d{yyyy-MM-dd HH:mm:ss} - %msg%n</pattern>
+		</encoder>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>${USER_HOME}/arqsme_controller.%d{yyyy-MM-dd}.log.gz</fileNamePattern>
+		</rollingPolicy>
+	</appender>
+
+	<root level="DEBUG">
+		<appender-ref ref="file" />
+	</root>
+	<logger name="AdwordsLog" level="DEBUG" additivity="false">
+		<appender-ref ref="file1" />
+	</logger>
+	<logger name="LogTesting" level="DEBUG" additivity="false">
+		<appender-ref ref="file2" />
+	</logger>
+
+</configuration>

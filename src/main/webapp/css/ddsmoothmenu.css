@@ -1,0 +1,79 @@
+.ddsmoothmenu{
+float:left;
+}
+
+.ddsmoothmenu ul{
+z-index:100;
+margin: 0;
+padding: 0;
+list-style-type: none;
+}
+
+/*Top level list items*/
+.ddsmoothmenu ul li{
+position: relative;
+display: inline;
+float: left;
+}
+
+/*Top level menu link items style*/
+.ddsmoothmenu ul li a{
+display: block;
+color: #FFF;
+text-decoration: none;
+background:url(../images/down.gif) no-repeat 82% 50%;
+}
+
+* html .ddsmoothmenu ul li a{ /*IE6 hack to get sub menu links to behave correctly*/
+display: inline-block;
+}
+
+.ddsmoothmenu ul li a:link, .ddsmoothmenu ul li a:visited{
+color: white;
+}
+
+.ddsmoothmenu ul li a.selected{ /*CSS class that's dynamically added to the currently active menu items' LI A element*/
+background: #00609d url(../images/down.gif) no-repeat 82% 50%;
+color: #FFF;
+}
+
+.ddsmoothmenu ul li a:hover{
+background: #00609d url(../images/down.gif) no-repeat 82% 50%; /*background of menu items during onmouseover (hover state)*/
+color: #fff;
+}
+	
+/*1st sub level menu*/
+.ddsmoothmenu ul li ul{
+position: absolute;
+left: 0;
+display: none; /*collapse all sub menus to begin with*/
+visibility: hidden;
+background:#00609d;
+}
+
+/*Sub level menu list items (undo style from Top level List Items)*/
+.ddsmoothmenu ul li ul li{
+display: list-item;
+float: none;
+}
+
+/*All subsequent sub menu levels vertical offset after 1st level sub menu */
+.ddsmoothmenu ul li ul li ul{
+top: 0;
+}
+
+
+/* Sub level menu links style */
+.ddsmoothmenu ul li ul li a{
+width: 140px; /*width of sub menus*/
+margin: 0;
+height:30px;
+background:none;
+font:normal 11px/25px Verdana, Geneva, sans-serif;
+border-top-width: 0;
+border-bottom: 1px dotted #0485d7;
+}
+.ddsmoothmenu ul li ul li a:hover {
+	text-decoration:underline;
+	background:none;
+}

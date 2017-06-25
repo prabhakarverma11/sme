@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC  
+        "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"  
+        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+
+<!--Commont layout -->
+
+	
+	
+	<definition name="403" template="/WEB-INF/jsp/403.jsp">
+		<put-attribute name="title" value="Access Denied" />
+	</definition>
+	<definition name="login" template="/WEB-INF/jsp/view/login.jsp">
+		<put-attribute name="title" value="Login" />
+	</definition>
+	<definition name="multilogin" template="/WEB-INF/jsp/view/multilogin.jsp">
+		<put-attribute name="title" value="Multiple Login" />
+	</definition>
+	
+	<definition name="register" template="/WEB-INF/jsp/view/register.jsp">
+	<put-attribute name="title" value="Register" />
+	</definition>
+	
+	<definition name="verificationsuccessfull" template="/WEB-INF/jsp/view/verificationsuccessfull.jsp">
+	<put-attribute name="title" value="Account Verification Success" />
+	</definition>
+	
+	<definition name="forgotpassword" template="/WEB-INF/jsp/view/forgotpassword.jsp">
+	<put-attribute name="title" value="Forgot Password" />
+	</definition>
+	
+	<definition name="accountverification" template="/WEB-INF/jsp/view/accountverification.jsp">
+	<put-attribute name="title" value="Account Verification" />
+	</definition>
+	
+	<!--      Layout for User Account                -->
+
+	<definition name="baseLayout" template="/WEB-INF/jsp/tiles/layout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header" value="/WEB-INF/jsp/tiles/header.jsp" />
+		<put-attribute name="menu" value="/WEB-INF/jsp/tiles/menu.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/WEB-INF/jsp/tiles/footer.jsp" />
+	</definition>
+	
+	
+
+	<definition name="homepage" extends="baseLayout">
+		<put-attribute name="title" value="Dashboard"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/jsp/view/homepage.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="addcampaign" extends="baseLayout">
+		<put-attribute name="title" value="Add Advertiser"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/jsp/view/addcampaign.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="campaignlist" extends="baseLayout">
+		<put-attribute name="title" value="Advertisers"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/jsp/view/campaignlist.jsp"></put-attribute>
+	</definition>	
+		
+	<definition name="addadgroup" extends="baseLayout">
+		<put-attribute name="title" value="Add Product"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/jsp/view/addadgroup.jsp"></put-attribute>
+	</definition>		
+	
+	<definition name="adgrouplist" extends="baseLayout">
+		<put-attribute name="title" value="Products"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/jsp/view/adgrouplist.jsp"></put-attribute>
+	</definition>	
+	
+	<definition name="adgroupdetails" extends="baseLayout">
+		<put-attribute name="title" value="Product Details"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/jsp/view/adgroupdetails.jsp"></put-attribute>
+	</definition>	
+	
+	
+	<definition name="editkeywords" extends="baseLayout">
+		<put-attribute name="title" value="Edit Keyword"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/jsp/view/editkeywords.jsp"></put-attribute>
+	</definition>
+	<definition name="adduser" extends="baseLayout">
+		<put-attribute name="title" value="Add User"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/jsp/view/adduser.jsp"></put-attribute>
+	</definition>		
+	
+	<definition name="userlist" extends="baseLayout">
+		<put-attribute name="title" value="Users"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/jsp/view/userlist.jsp"></put-attribute>
+	</definition>	
+	
+	<definition name="cpreport" extends="baseLayout">
+		<put-attribute name="title" value="Campaign Performance Report"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/jsp/view/cpreport.jsp"></put-attribute>
+	</definition>	
+	
+	<definition name="editcampaign" extends="baseLayout">
+		<put-attribute name="title" value="Update Advertiser"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/jsp/view/editcampaign.jsp"></put-attribute>
+	</definition>	
+	
+	<definition name="editadgroup" extends="baseLayout">
+		<put-attribute name="title" value="Update Product"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/jsp/view/editadgroup.jsp"></put-attribute>
+	</definition>	
+	
+	<definition name="edituser" extends="baseLayout">
+		<put-attribute name="title" value="Update Account"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/jsp/view/edituser.jsp"></put-attribute>
+	</definition>	
+	
+
+</tiles-definitions>

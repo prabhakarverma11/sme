@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Login</title>
+<!-- Bootstrap -->
+<link href="login/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+<link href="login/css/font-awesome.min.css" rel="stylesheet">
+<link href="login/css/style.css" rel="stylesheet">
+<link href="login/css/style-responsive.css" rel="stylesheet">
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+
+</head>
+<body >
+<div class="login-container">
+
+  <div class="middle-login">
+  <div class="login-logo">
+  	<img src="images/login-page-logo.gif" alt="logo" />
+  </div>
+    <div class="block-web">
+      <div class="head">
+        <h3>Login Access</h3>
+      </div>
+      <div style="background:#fff;">
+      <form name='f' action='advertiser1.html' onsubmit="return isUserValid();" id="loginform" method='POST' style="margin-bottom: 0px !important;">
+       <c:if test="${not empty error}">
+			<!-- <div class="error" align="center">${error}</div> -->
+		</c:if>
+          <div class="content">
+            <div class="form-group">
+              <div class="col-sm-12">
+                <div class="input-group"> <span class="input-group-addon"><i class="fa fa-user" style="width:15px;height:14px;"></i></span>
+                 <input type="text" placeholder="Username" name='j_username' value='' id="username" required>
+                </div>
+              </div>
+            </div>
+            
+            
+              <div class="form-group">
+              <div class="col-sm-12">
+                <div class="input-group"> <span class="input-group-addon"><i class="fa fa-lock" style="width:15px;height:14px;"></i></span>
+                 <input type='password' placeholder="Password" name='j_password' id="password" required >
+                </div>
+              </div>
+            </div>
+             
+          </div>
+          <div class="foot" style="padding-bottom:10px">
+            <button type="submit" data-dismiss="modal" class="btn btn-primary" >Log in</button>  
+          </div>
+        
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+<script src="login/js/jquery-2.0.2.min.js"></script> 
+<!-- Include all compiled plugins (below), or include individual files as needed --> 
+<script src="login/bootstrap/js/bootstrap.min.js"></script>
+
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="js/jquery.validate.js"></script>
+<script type="text/javascript">
+
+function isUserValid()
+{
+	if($("#username").val().toUpperCase()!="MANU"||$("#password").val().toUpperCase()!="MANU")
+	{
+		alert("Username or Password is invalid");
+		return false;
+	}
+
+}
+
+</script> 
+</body>
+</html>

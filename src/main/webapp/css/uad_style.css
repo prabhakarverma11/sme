@@ -1,0 +1,237 @@
+@charset "utf-8";
+/* CSS Document */
+
+* { margin:0;}
+body { background:#FFF url(../images/bg.png) top left; font:normal 11px/17px Verdana, Geneva, sans-serif;}
+img { border:none;}
+a { outline:none;}
+
+/**************************************/
+.nav_container {
+	float:left;
+	width:100%;
+	height:35px;
+	background:#0485d7;
+	position:fixed;
+	top:0px;
+	left:0px;
+}
+.nav {
+	margin:auto;
+	width:990px;	
+}
+.nav ul { 
+	float:left;
+	margin:0;
+	padding:0;
+	list-style-type:none;
+}
+.nav ul li { 
+	float:left;
+	padding:0;
+	margin:0 1px 0 0;
+	border-right:solid 1px #00609d;
+	border-left:solid 1px #00609d;
+	list-style-type:none;
+	position:relative;
+	z-index:500;
+}
+.nav ul li a { 
+	float:left;
+	padding:0 40px 0 20px;
+	height:35px;
+	font:normal 11px/35px Verdana, Geneva, sans-serif;
+	color:#FFF;
+	text-decoration:none;
+}
+.home {
+	float:left;
+	padding:0 20px 0 10px;
+	height:35px;
+	border-right:solid 1px #00609d;
+}
+
+.nav ul li a img { float:right;}
+.nav ul li a:hover, .nav ul li a.active { 
+	background:#00609d;
+}
+
+.account_inn {
+	float:right;
+}
+.account_inn a {
+	float:left;
+	padding:0 10px;
+	height:35px;
+	font:normal 11px/35px Verdana, Geneva, sans-serif;
+	color:#FFF;
+	border-right:solid 1px #00609d;
+	text-decoration:none;
+}
+.account_inn a:hover {
+	background:#00609d;
+}
+
+.wrapper_container {
+	margin:auto;
+	width:1000px;	
+}
+.wrapper { float:left; width:100%; padding:35px 0 0 0;}
+.common_panel { 
+	float:left;
+	width:978px;
+	padding:10px;
+	border:solid 1px #ccc;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	background:#FFF;
+	margin:10px 0 0 0;
+}
+.banner { 
+	float:left;
+	width:100%;
+}
+.logo { float:left; }
+
+/******************************************************************/
+.homepage_information {
+	float:left;
+	width:658px;
+	padding:0 10px 0 0;
+	border-right:solid 1px #FFF;
+}
+.homepage_information h3 {
+	border-bottom:solid 1px #ccc;
+	padding:0 0 5px 0;	
+}
+.homepage_content {
+	float:left;
+	width:100%;
+	padding:5px 0 0 0;
+	color:#333;
+	text-align:justify;	
+}
+.login_panel_container {
+	float:left;
+	width:276px;
+	padding:10px;
+	background:#d9eefb;
+	margin:0 0 0 10px;
+	border:solid 1px #9aceef;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+}
+.login_panel_container h3 {
+	border-bottom:solid 1px #0485d7;
+	padding:0 0 5px 0;
+	color:#00609d;
+}
+.login_panel_container input[type="text"], .login_panel_container input[type="password"] {
+	width:254px;
+	height:28px;
+	padding:0 5px;
+	border:solid 1px #00609d;
+}
+
+.login_panel_container input[type="text"]:focus, .login_panel_container input[type="password"]:focus {
+	border:solid 1px #75a900;
+}
+.login_panel_container input[type="submit"] {
+	width:101px;
+	float:right;
+	margin:10px 0 0 0;
+	cursor:pointer;
+	height:32px;
+	border:none;
+	background:url(../images/sign_in.png) no-repeat top left;
+}
+.login_panel_container input[type="checkbox"] {
+	float:left;
+	width:20px;
+	height:20px;
+}
+.forgot_password {
+	float:left;
+	margin:20px 0 0 0;
+	color:#000;
+}
+.forgot_password:hover {
+	text-decoration:none;	
+}
+
+.sign_up {
+	float:left;
+	width:100%;
+	border-top:solid 1px #0485d7;
+	margin:10px 0 0 0;
+}
+.sign_up span {
+	text-align:justify;
+	width:100%;
+	padding:10px 0;
+	float:left;	
+}
+.sign_up a {
+	float:right;
+	background:#f8c405;
+	padding:10px 20px;
+	font:bold 11px Verdana, Geneva, sans-serif;
+	border:solid 1px #0485d7;
+	color:#000;
+	text-decoration:none;	
+}
+.sign_up a:hover {
+	border:solid 1px #75a900;
+}
+.center { text-align:center;}
+
+/*******************************************************/
+.table {
+	border-collapse:collapse;
+	margin:0 190px;
+	border:solid 1px #eee;
+}
+.table tr td {
+	border-bottom:solid 1px #eee;
+	border-collapse:collapse;	
+}
+.table input[type="text"] {
+	width:254px;
+	height:28px;
+	padding:0 5px;
+	border:solid 1px #00609d;
+}
+
+.table input[type="text"]:focus {
+	border:solid 1px #75a900;
+}
+.table select {
+	width:266px;
+	height:32px;
+	padding:5px;
+	border:solid 1px #00609d;
+}
+.table input[type="radio"] {
+	float:left;
+	width:20px;
+	height:20px;
+}
+.table span {
+	float:left;
+	height:20px;
+	padding:0 15px 0 0;	
+}
+.table input[type="submit"] {
+	float:left;
+	cursor:pointer;
+	height:32px;
+	padding:0 20px;
+	border:none;
+	background:#0485d7;
+	color:#FFF;
+}
+.table a {
+	margin:0 0 0 20px;	
+}

@@ -1,0 +1,29 @@
+/*chart css*/
+.chart-buttons{
+    cursor: pointer;
+    width: 100px;
+    height: 25px;
+    background-color: white;
+    font-color : black;  
+    font-size: larger;
+    border: #024463 outset thin;         
+    padding : 15px;
+    text-align: center;
+    background-position: initial initial;
+    background-repeat: initial initial;
+}
+
+.chart-after-click{    
+    cursor: pointer; 
+    width: 100px;
+    height: 25px;
+    font-size: larger;
+    padding : 15px;
+    text-align: center;
+    border: #024463 outset thin;
+    background-color: rgb(218, 14, 14);
+    color : white;
+    background-position: initial initial;
+    background-repeat: initial initial;
+}
+

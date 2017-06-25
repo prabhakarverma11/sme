@@ -1,0 +1,9 @@
+/Welcome
+/register
+/registernewuser
+/verifyaccount
+/forgotpassword
+/accountverification
+/pausekeyword
+/test.json
+/savecontact

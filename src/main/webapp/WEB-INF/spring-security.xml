@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns="http://www.springframework.org/schema/security" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
+        http://www.springframework.org/schema/security 
+        http://www.springframework.org/schema/security/spring-security-4.1.xsd
+        http://www.springframework.org/schema/tx
+		http://www.springframework.org/schema/tx/spring-tx.xsd
+        http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+	<beans:bean id="authErrorHandler"
+		class="com.dq.arq.sme.util.AuthenticationFailureHandlerImpl" />
+	<beans:bean name="SessionDestroyListener"
+		class="com.dq.arq.sme.services.SessionDestroyListener"></beans:bean>
+	<beans:bean name="UserDo" class="com.dq.arq.sme.domain.UserDo"></beans:bean>
+
+	<context:component-scan base-package="com.dq.arq.sme" />
+	<tx:annotation-driven />
+	<http auto-config="true" use-expressions="true" create-session="ifRequired">
+		<access-denied-handler error-page="/403" />
+		
+	
+	<!-- every role has access to following -->
+		<intercept-url pattern="/Welcome" access="permitAll" />
+		<intercept-url pattern="/login*" access="permitAll" />
+		<intercept-url pattern="/error" access="permitAll" />
+		<intercept-url pattern="/403" access="permitAll" />
+		<intercept-url pattern="/userHome" access="permitAll" />
+		<intercept-url pattern="/selectRole" access="permitAll" />
+		<intercept-url pattern="/destroySession" access="permitAll" />
+		<intercept-url pattern="/selectSession" access="permitAll" />
+		<intercept-url pattern="/register" access="permitAll" />
+		<intercept-url pattern="/registernewuser" access="permitAll" />
+		<intercept-url pattern="/verifyaccount" access="permitAll" />
+		<intercept-url pattern="/forgotpassword" access="permitAll" />
+		<intercept-url pattern="/accountverification" access="permitAll" />
+		<intercept-url pattern="/cpreport" access="permitAll" />
+		<intercept-url pattern="/edituser" access="permitAll" />
+		<intercept-url pattern="/updateuser" access="permitAll" />
+		<intercept-url pattern="/mailReport" access="permitAll" />
+		<intercept-url pattern="/downloadcsv" access="permitAll" />
+		<intercept-url pattern="/pausekeyword" access="permitAll" />
+
+	<!-- Only Admin has access to following-->
+		<intercept-url pattern="/adduser" access="hasAnyRole('ROLE_ADMIN')" />
+		<intercept-url pattern="/saveuser" access="hasAnyRole('ROLE_ADMIN')" />
+		<intercept-url pattern="/listuser" access="hasAnyRole('ROLE_ADMIN')" />
+		<intercept-url pattern="/kpreport" access="hasAnyRole('ROLE_ADMIN')" />
+		<intercept-url pattern="/refresh30dayscpreport" access="hasAnyRole('ROLE_ADMIN')" />
+		<intercept-url pattern="/refreshtodaycpreport" access="hasAnyRole('ROLE_ADMIN')" />
+		<intercept-url pattern="/searchuserlist" access="hasAnyRole('ROLE_ADMIN')" />
+		<intercept-url pattern="/testkey" access="hasAnyRole('ROLE_ADMIN')" />
+		<intercept-url pattern="/changeadstatus" access="hasAnyRole('ROLE_ADMIN')" />
+		<intercept-url pattern="/syncadgroup" access="hasAnyRole('ROLE_ADMIN')" />
+		<intercept-url pattern="/changeadgroupstatus" access="hasAnyRole('ROLE_ADMIN')" />
+		<intercept-url pattern="/searchadgrouplist" access="hasAnyRole('ROLE_ADMIN')" />
+		<intercept-url pattern="/synccampaign" access="hasAnyRole('ROLE_ADMIN')" />
+		<intercept-url pattern="/searchcampaignlist" access="permitAll" />
+		<intercept-url pattern="/changecampaignstatus" access="hasAnyRole('ROLE_ADMIN')" />
+		<intercept-url pattern="/editkeywords" access="hasAnyRole('ROLE_ADMIN')" />
+		<intercept-url pattern="/updatekeyword" access="hasAnyRole('ROLE_ADMIN')" />
+		<intercept-url pattern="/changekeywordstatus" access="hasAnyRole('ROLE_ADMIN')" />
+
+
+	<!-- Access to both Admin and User roles-->
+		<intercept-url pattern="/savead" access="hasAnyRole('ROLE_ADMIN','ROLE_USER')" />
+		<intercept-url pattern="/updatead" access="hasAnyRole('ROLE_ADMIN','ROLE_USER')" />
+		<intercept-url pattern="/addadgroup" access="hasAnyRole('ROLE_ADMIN','ROLE_USER')" />
+		<intercept-url pattern="/saveadgroup" access="hasAnyRole('ROLE_ADMIN','ROLE_USER')" />
+		<intercept-url pattern="/listadgroup" access="hasAnyRole('ROLE_ADMIN','ROLE_USER')" />
+		<intercept-url pattern="/editadgroup" access="hasAnyRole('ROLE_ADMIN','ROLE_USER')" />
+		<intercept-url pattern="/updateadgroup" access="hasAnyRole('ROLE_ADMIN','ROLE_USER')" />
+		<intercept-url pattern="/adgroupdetails" access="hasAnyRole('ROLE_ADMIN','ROLE_USER')" />
+		<intercept-url pattern="/addcampaign" access="hasAnyRole('ROLE_ADMIN','ROLE_USER')" />
+		<intercept-url pattern="/savecampaign" access="hasAnyRole('ROLE_ADMIN','ROLE_USER')" />
+		<intercept-url pattern="/listcampaign" access="hasAnyRole('ROLE_ADMIN','ROLE_USER')" />
+		<intercept-url pattern="/editcampaign" access="hasAnyRole('ROLE_ADMIN','ROLE_USER')" />
+		<intercept-url pattern="/updatecampaign" access="hasAnyRole('ROLE_ADMIN','ROLE_USER')" />
+		
+
+		<csrf disabled="true" />
+		<logout invalidate-session="true" logout-url="/logout"
+			delete-cookies="JSESSIONID" logout-success-url="/Welcome?msg=loggedout" />
+		<form-login login-page="/Welcome" username-parameter="username"
+			password-parameter="password" login-processing-url="/j_spring_security_check"
+			authentication-failure-handler-ref="authErrorHandler"
+			authentication-failure-url="/Welcome?msg=invalidup"
+			default-target-url='/userHome' />
+	</http>
+	<authentication-manager>
+		<authentication-provider>
+			<jdbc-user-service id="userService"
+				data-source-ref="hDataSource"
+				users-by-username-query="select U.email as username, U.password, true as enabled from user U where U.email=?"
+				authorities-by-username-query="select U.email as username, R.role as authorities from user U, user_role R, user_role_map URM where URM.user_id=U.id and URM.user_role_id=R.id and U.email=?" />
+		</authentication-provider>
+	</authentication-manager>
+
+</beans:beans>

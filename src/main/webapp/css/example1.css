@@ -1,0 +1,299 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body {
+	margin:0;
+	padding:0;
+	background:#FFF;
+	font-weight: normal;
+}
+@font-face {
+	font-family: 'ArialRoundedMTBold';
+	src: url('../fonts/arlrdbd.eot');
+	src: url('../fonts/arlrdbd.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/arlrdbd.woff') format('woff'),
+	url('../fonts/arlrdbd.ttf') format('truetype'),
+	url('../fonts/arlrdbd.svg#arlrdbd') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'robotoregular';
+	src: url('../fonts/roboto-regular-webfont.eot');
+	src: url('../fonts/roboto-regular-webfont.eot?#iefix') format('embedded-opentype'),  url('../fonts/roboto-regular-webfont.woff') format('woff'),  url('../fonts/roboto-regular-webfont.ttf') format('truetype'),  url('../fonts/roboto-regular-webfont.svg#robotoregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+#banner{   
+	position: absolute;   
+}     
+
+.oneByOne1{ 
+	background:none;	
+	margin: auto;
+	width: 1100px;
+	height: 416px;   
+	background:none;    
+	position: relative;
+	overflow: hidden;
+
+}   
+
+#banner .oneByOne_item{
+	position: absolute;
+	width: 1000px;
+	padding:0 50px;
+	height: 414px;  
+	overflow: hidden;  
+}         
+                      
+#banner .oneByOne_item span{
+	font-family: "Lucida Grande", "Lucida Sans Unicode", helvetica, verdana, arial, sans-serif;
+}                                                                                              
+
+#banner .oneByOne_item a{
+	text-decoration: none;
+	color: #B22222;
+}
+              
+
+
+/* slide 1 */
+#banner img.img1{
+	position: absolute;
+	bottom: 50px;
+	right:50px;
+}
+
+#banner img.img2{
+	position: absolute;
+	bottom: 35px;
+	left: 600px;
+} 
+#banner img.img3{
+	position: absolute;
+	bottom: 25px;
+	left: 710px;
+}          
+
+#banner .oneByOne_item .text1{
+	position: relative;
+	float: left;
+	margin: 80px 12px 0 10px;
+	color: #333;	
+	font-size: 24px;
+	font-family: 'ArialRoundedMTBold';
+	font-weight:normal;
+}
+
+#banner .oneByOne_item .text2{              
+	clear: left;
+	position: relative;
+	float: left;
+	margin: 20px 12px 0 10px;
+	font-family: 'robotoregular';
+	color: #FFF;
+	background:#333;
+	font-size: 24px;
+	line-height:30px;
+	padding:10px;
+	text-transform:none;
+}
+#banner .oneByOne_item .text2 strong{              
+	font-size: 22px;
+	float:left;
+	padding-bottom:10px;
+	color:#333;
+	text-transform:none;
+} 
+#banner .oneByOne_item .sign-up-button{              
+	clear: left;
+	position: relative;
+	float: left;
+	margin: 50px 12px 0 10px;
+	color: #FFF;
+	background:#5aba00 url(../images/arrow-right.png) no-repeat 90% 50%;
+	padding:15px 30px 15px 15px;
+	font-size: 16px;
+	text-transform:uppercase;
+	font-weight:bold;
+	font-family: 'robotoregular';
+	text-shadow:1px 1px 1px #254c00;
+	border:solid 1px #3e7f00;
+}             
+
+/* slide 2 */
+#banner img.img4{
+	position: absolute;
+	bottom: 5px;
+	right: 60px;
+}
+#banner img.img5{
+	position: absolute;
+	top: 75px;
+	right: 180px;
+}
+#banner img.img7{
+	position: absolute;
+	top: 165px;
+	right: 150px;
+}
+#banner img.img8{
+	position: absolute;
+	top: 250px;
+	right: 220px;
+}
+#banner img.img6{
+	position: absolute;
+	bottom: 15px;
+	left: 420px;
+}
+#banner .oneByOne_item .text3{
+	clear: left;
+	position: relative;
+	float: left;
+	margin: 80px 12px 0 10px;    
+	color: #333;	
+	font-size: 52px;
+	font-family: 'ArialRoundedMTBold';
+}          
+#banner .oneByOne_item .text4{
+	clear: left;
+	position: relative;
+	float: left;
+	color:#FFF;
+	padding:10px;
+	background:#333;
+	margin: 25px 12px 0 10px; 	
+	font-family: 'robotoregular';
+	font-size: 24px;
+	line-height:30px;
+	text-transform:none;
+}                     
+  
+/* slide 3 */
+#banner .slide3 img.wp1{
+	position: absolute;
+	top: 255px;
+	left: 512px;
+}
+#banner .slide3 img.wp2{
+	position: absolute;
+	top: 190px;
+	left: 360px;
+}              
+#banner .slide3 img.wp3{
+	position: absolute;
+	top: 64px;
+	left: 80px;
+}   
+
+#banner .slide3 span.txt1{
+	clear: left;
+	position: relative;
+	float: left;
+	margin: 80px 0 0 530px;    
+	color: #333;	
+	font-size: 52px;
+	font-family: 'ArialRoundedMTBold'
+} 
+#banner .slide3  span.txt1 a{
+	color: #333;
+}         
+#banner .slide3 span.txt2{
+	clear: left;
+	position: relative;
+	float: left;
+	margin: 12px 0 0 530px;
+	color: #FFFFFF;  
+	background: #333;
+	padding: 10px;
+	font-size: 24px;
+}                   
+#banner .slide3 .sign-up-button-3 {              
+	clear: left;
+	position: relative;
+	float: left;
+	margin: 45px 0 0 530px;
+	color: #FFF;
+	background:#5aba00 url(../images/arrow-right.png) no-repeat 90% 50%;
+	padding:15px 30px 15px 15px;
+	font-size: 16px;
+	text-transform:uppercase;
+	font-weight:bold;
+	font-family: 'robotoregular';
+	text-shadow:1px 1px 1px #254c00;
+	border:solid 1px #3e7f00;
+}      
+
+/* slide 4 */   
+#banner img.wp1{
+	position: absolute;
+	top: 240px;
+	left: 380px;
+}
+#banner img.wp2{
+	position: absolute;
+	top: 200px;
+	left: 470px;
+}              
+#banner img.wp3{
+	position: absolute;
+	top: 100px;
+	left: 600px;
+}   
+
+#banner .oneByOne_item span.wp1{
+	clear: left;
+	position: relative;
+	float: left;
+	margin: 120px 12px 0 60px;    
+	background: #20B2AA;     
+	padding: 8px;
+	color: #FFFFFF;
+	font-size: 40px;
+} 
+#banner .oneByOne_item span.wp1 a{
+	color: #FFFFFF;
+}         
+#banner .oneByOne_item span.wp2{
+	clear: left;
+	position: relative;
+	float: left;
+	margin: 12px 12px 0 60px; 
+	
+	color: #FFFFFF;  
+	background: #5F9EA0;
+	padding: 8px;
+	font-size: 16px;
+}                  
+
+/* slide 5 */
+#banner .oneByOne_item img.bigImage{ 
+	position: absolute;
+	top: 0; 
+	left: 0;
+
+}
+#banner .oneByOne_item span.slide5Txt1{ 
+  	position: relative;
+	float: left;
+	margin: 150px 12px 0 600px;
+	color: #9ACD32;	
+	font-size: 24px;  
+	background: #FFFFFF;
+	padding: 8px;             
+}
+ 
+#banner .oneByOne_item span.slide5Txt2{ 
+  	position: relative;
+	clear: left;
+	float: left;
+	margin: 12px 12px 0 600px;
+	color: #666666;	
+	font-size: 12px;  
+	background: #FFFFFF;
+	padding: 8px;             
+}  

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<project basedir=".">
+<target name="copy">
+	  	 <copy file="${folder}/ads.properties" todir="src/main/resources" overwrite="true"/>
+		 <copy file="${folder}/logback.xml" todir="src/main/resources" overwrite="true"/>	
+         <copy file="${folder}/sme.properties" todir="src/main/resources" overwrite="true"/>
+		 <copy file="${folder}/jdbc.properties" todir="src/main/webapp/WEB-INF" overwrite="true"/>
+         <copy file="${folder}/pom.xml" todir="src/main/resources" overwrite="true"/>
+		 <copy file="${folder}/sme_scheduler.xml" todir="src/main/resources" overwrite="true"/>
+		 <copy file="${folder}/mail.properties" todir="src/main/resources" overwrite="true"/>
+         		 
+	  </target>
+</project>

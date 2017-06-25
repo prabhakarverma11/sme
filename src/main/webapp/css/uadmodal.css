@@ -1,0 +1,51 @@
+@font-face { font-family: "BurberryCapitalsSmallRegular"; font-style: normal; font-weight: normal; src: local("☺"), url("http://cdn.burberry.com/fonts/burberrycapitalssmall_0-webfont.woff") format("woff"), url("http://cdn.burberry.com/fonts/burberrycapitalssmall_0-webfont.ttf") format("truetype"), url("http://cdn.burberry.com/fonts/burberrycapitalssmall_0-webfont.svg#BurberryCapitalsSmallRegular") format("svg"); }
+div.vdoModalDisappear { -webkit-transition: -webkit-transform 1s ease-in;-webkit-transform: scale(1, 0);-moz-transform: scale(1, 0);transform: scale(1, 0);}
+div#vdoModalFull {font-family:Verdana;font-size:12px;color:#777;}
+div#vdoModalLoading {width:150px;height:150px;text-indent:-9999em;background:#fff url(../../files/images/html5/modalLoader.gif) no-repeat;background-position:center;border:4px solid #000;}
+div#vdoModalLoading.error {width:300px;height:100px;line-height:20px;text-indent:0;background:#fff;border:4px solid #f66;padding:20px;}
+div#vdoModalWrapper {background:#fff;border:4px solid #000;}
+/*a#closeBut {width:50;height:50;text-indent:-9999em;background:url(../../files/images/html5/modalClose.gif) no-repeat;background-position:center;outline:0;position:absolute;top:-25px;right:-25px;z-index:9999;display:block;}*/
+a#iphoneCloseBut {border-width:1px;border-style:solid;border-color:rgb(0,0,0);width:267;height:40;text-indent:-9999em;background:#000000 url(../../files/images/html5/iphoneModalClose.png) no-repeat;background-position:center;outline:0;position:absolute;top:-40px;right:-1px;z-index:9999;display:block;}
+/*a#ipadCloseBut {border-width:1px;border-style:solid;border-color:rgb(0,0,0);width:620;height:60;text-indent:-9999em;background:#000000 url(../../files/images/html5/ipadModalClose.png) no-repeat;background-position:center;outline:0;position:absolute;top:-60px;right:-1px;z-index:9999;display:block;}*/
+div.wrapper div#vdoModalContent {padding:20px;}
+div.wrapperImg div#vdoModalContent {text-align:center;overflow:hidden;position:relative;}
+div.wrapperImg img {vertical-align:baseline;}
+div.wrapperImg div#vdoModalContent div {background:black;border:1px white dotted;padding:10px;margin:10px;overflow:hidden;position:absolute;bottom:0;left:0;opacity:0.2;filter:alpha(opacity=20);}
+div.wrapperImg div#vdoModalContent div:hover {cursor:help;opacity:0.5;filter:alpha(opacity=50);}
+div.wrapperImg a {height:100%;background-image:url(data:image/gif;base64,AAAA);/* Trick IE6 */text-indent:-9999em;cursor:pointer;outline:none;position:absolute;top:0;}
+a#ipadCloseBut { width:620px; height:60px; border:1px solid black; padding: 0px; background: -webkit-gradient(linear, left top, left bottom, from(#92bffd), to(#6094fc), color-stop(0.5, #4484fb), color-stop(0.5, #44bbfc)); background-position:center;outline:0;position:absolute;top:-60px;right:-1px;z-index:9999;display:block;/*-webkit-background-origin: padding-box; -webkit-background-clip: content-box;*/ }
+div#vdoAdText{width:inherit;text-align:center;font-family:Arial, sans-serif; background:transparent;color:white;position:absolute}
+.vdoLnkDiv {width:100%;background: url(../images/borderLine.jpg);border:0px; color:#FFFFFF;text-align: center; font-size: 11px;font-family:arial; vertical-align: middle;}
+div#closeButBox{position:relative;text-align:center;border-width:0px;border-style:solid;border-color:#2a2a2a;width:inherit;}
+#lmtext {
+position:absolute;
+z-index:9999;
+font-family:Arial;
+font-size: 14px;
+padding: 5px 10px;
+display: inline;
+background: #777 url(../../files/images/html5/button.png?v=5) repeat-x bottom;
+border: none;
+color: #fff;
+cursor: pointer;
+font-weight: bold;
+border-radius: 5px;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+text-shadow: 1px 1px #666;
+}
+#lmtext:hover {
+background-position: 0 -48px;
+}
+#lmtext:active {
+background-position: 0 top;
+position: relative;
+top: 1px;
+padding: 6px 10px 4px;
+}
+div.vdoOpq{
+-webkit-transition: opacity 0.2s linear;
+}
+div.vdoTrans{
+-webkit-transition: -webkit-transform 0.3s ease-out;
+}
